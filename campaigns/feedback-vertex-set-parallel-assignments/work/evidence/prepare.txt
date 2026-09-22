@@ -1,0 +1,7 @@
+2026-09-22, repository root, after the empty-Distinct repair.
+uv run python campaigns/feedback-vertex-set-parallel-assignments/work/check.py --self-test
+PASS: 10 source cases; 192 exhaustive-permutation target thresholds; self/external reads, empty instances, malformed orders, and huge integers
+Exit 0.
+uv run python -c 'import sys,z3; print(sys.version); print(z3.get_version_string())'
+CPython 3.14.2, Clang 17.0.0; Z3 5.1.0.
+Mathlib absent from .lake/packages/mathlib; formalization not requested.

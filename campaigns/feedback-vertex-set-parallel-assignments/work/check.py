@@ -75,7 +75,8 @@ def target_answers(x, limit=4):
     n = len(assignments)
     ranks = [z3.Int(f'p{i}') for i in range(n)]
     solver = z3.Solver()
-    solver.add(z3.Distinct(ranks))
+    if ranks:
+        solver.add(z3.Distinct(ranks))
     for p in ranks:
         solver.add(p >= 0, p < n)
     penalties = [z3.If(ranks[i] < ranks[j], 1, 0) for i, a in enumerate(assignments) for j, b in enumerate(assignments) if i != j and a['write'] in b['reads']]

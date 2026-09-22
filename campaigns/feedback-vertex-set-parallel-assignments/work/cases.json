@@ -1,0 +1,12 @@
+[
+ {"source":{"vertices":[],"arcs":[],"k":0},"exists":true},
+ {"source":{"vertices":[],"arcs":[],"k":-1},"exists":false},
+ {"source":{"vertices":[0],"arcs":[[0,0]],"k":0},"exists":false},
+ {"source":{"vertices":[0],"arcs":[[0,0]],"k":1},"exists":true},
+ {"source":{"vertices":[0,1],"arcs":[[0,1],[1,0]],"k":0},"exists":false},
+ {"source":{"vertices":[0,1],"arcs":[[0,1],[1,0]],"k":1},"exists":true},
+ {"source":{"vertices":[0,1,2],"arcs":[[0,1],[1,2],[2,0]],"k":1},"exists":true},
+ {"source":{"vertices":[0,1,2],"arcs":[[0,1],[1,0],[0,2],[2,0],[1,2],[2,1]],"k":1},"exists":false},
+ {"source":{"vertices":[0,1,2],"arcs":[[0,1],[1,0],[0,2],[2,0],[1,2],[2,1]],"k":2},"exists":true},
+ {"source":{"vertices":[7,2,-5],"arcs":[[7,2],[2,-5]],"k":0},"exists":true}
+]

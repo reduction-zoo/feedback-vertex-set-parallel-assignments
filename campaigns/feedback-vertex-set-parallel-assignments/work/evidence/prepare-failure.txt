@@ -1,0 +1,9 @@
+2026-09-22. Initial preparation run, no candidate exists.
+uv run python campaigns/feedback-vertex-set-parallel-assignments/work/check.py --self-test
+Exit 1, at the empty target case:
+check.py line 78: solver.add(z3.Distinct(ranks))
+z3.z3types.Z3Exception: At least one of the arguments must be a Z3 expression
+Reproducer: target {"assignments":[],"K":0}, also K=-1.
+Expected: empty ordering for K=0, conclusive NO-SOLUTION for K=-1.
+Actual: oracle API exception before feasibility was decided.
+Diagnosis: Z3 requires an expression to infer a context for Distinct. The empty all-different condition is mathematically vacuous. Omit it when ranks is empty, retaining the cost bound and empty-model enumeration. Not a candidate failure and not a semantic negative answer.

@@ -1,5 +1,7 @@
 # Directed Feedback Vertex Set to Parallel-assignment ordering
 
-Independent campaign; testing foundation pending. [Question](campaigns/feedback-vertex-set-parallel-assignments/question.md) · [State](campaigns/feedback-vertex-set-parallel-assignments/state.md).
+Status: ready_for_expert_review as a reconstruction, not a new reduction principle. [Question](campaigns/feedback-vertex-set-parallel-assignments/question.md) · [State](campaigns/feedback-vertex-set-parallel-assignments/state.md) · [Proof](campaigns/feedback-vertex-set-parallel-assignments/work/proof.md) · [Independent review](campaigns/feedback-vertex-set-parallel-assignments/reviews/001/review.md) · [Paper](campaigns/feedback-vertex-set-parallel-assignments/work/paper/manuscript.pdf).
 
-Budget: 20 research rounds. Owned by persistent Codex queue session 01a0c863-d8a5-7492-ae84-1cff559daee6. No result claimed yet.
+Budget: 20 rounds; used 1, remaining 19; one mechanism. Deterministic protected-path construction and every-valid-output recovery for the fixed conflicting-pair objective. Verify passed 204 instances and 607 recoveries, including 116 nonoptimal orders. Reviewer recommended advance after additional targeted checks. Four-page English paper compiled and visually inspected. Finite checks are not a general proof or human certification; process deviations remain in state.
+
+Reproduce with `uv sync --locked`, then from `campaigns/feedback-vertex-set-parallel-assignments/work/` run `uv run python check.py --self-test`, `uv run python check.py --candidate algorithm.py`, and `uv run python verify.py --candidate algorithm.py`. Forward mode: `uv run python algorithm.py < source.json`; recovery mode: `uv run python algorithm.py --extract < recovery.json`. Contract and paper appendix specify inputs. No sibling runtime dependency.

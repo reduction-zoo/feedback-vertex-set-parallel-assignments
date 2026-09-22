@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="245" viewBox="0 0 700 245">
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10Z" fill="black"/></marker></defs>
+<g fill="none" stroke="black" stroke-width="2" marker-end="url(#arrow)">
+<path d="M88 115H151" stroke-width="3"/>
+<path d="M209 104L303 62"/><path d="M209 126L303 168"/>
+<path d="M357 62L471 104"/><path d="M357 168L471 126"/>
+<path d="M529 115H601" stroke-width="3"/>
+</g>
+<g fill="white" stroke="black" stroke-width="2">
+<circle cx="60" cy="115" r="28"/><circle cx="180" cy="115" r="28"/>
+<circle cx="330" cy="50" r="28"/><circle cx="330" cy="180" r="28"/>
+<circle cx="500" cy="115" r="28"/><circle cx="630" cy="115" r="28"/>
+</g>
+<g font-family="serif" font-size="21" text-anchor="middle">
+<text x="60" y="122">uᵢₙ</text><text x="180" y="122">uₒᵤₜ</text>
+<text x="330" y="57">c₁</text><text x="330" y="187">c₂</text>
+<text x="500" y="122">vᵢₙ</text><text x="630" y="122">vₒᵤₜ</text>
+<text x="120" y="82">split</text><text x="565" y="82">split</text>
+<text x="350" y="237">k = 1: two private paths protect the source arc u → v.</text>
+</g></svg>

@@ -1,0 +1,9 @@
+# Manuscript inspection — 2026-09-22
+
+Applied research-write and the technical-writing skill before drafting and again for the final language pass. Scope is the unchanged reviewed theorem; attribution follows the review's precise primary source. No mathematical strengthening.
+
+One initial patch failed because it requested delete and add of the same path; no file changed and no mathematical check ran. Reapplied as an update. Initial `typst compile manuscript.typ manuscript.pdf` exited 0 without diagnostics. First four-page inspection found duplicated reference prefixes, theorem subscript attachment scope, and an SVG multi-subpath marker that drew only the last path arrowhead. Corrected references, explicitly grouped function subscripts, and separated the four SVG path elements. These were editorial defects, not changed graph adjacency.
+
+Final command, from this directory: `typst compile manuscript.typ manuscript.pdf`, exit 0, no diagnostics. Render: `pdftoppm -png -scale-to 1400 manuscript.pdf /tmp/feedback-assignment-final`, exit 0. PDF has four A4 pages (Typst 0.15.1). All four final images viewed individually at 1400-pixel page scale. Page 1: title, theorem, correct S_B(F(x))/S_A(x) grouping and definitions legible. Page 2: six vertices/six directed arcs, two split arcs, private middle vertices and all arrowheads correct; captions, recovery and lemmas unclipped. Page 3: completeness, size bounds and references legible. Page 4: commands, evidence, deviations and review limits fit without clipping. No broken tables, detached setup/formula or unreadable labels found. Reproducible PNGs remain outside Git; PDF and vector source retained.
+
+Algorithm evidence reused unchanged from 08314ee and independent review. Finite checks do not certify the general theorem. The reviewed manuscript remains awaiting external expert assessment.

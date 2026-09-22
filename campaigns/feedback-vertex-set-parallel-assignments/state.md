@@ -1,6 +1,6 @@
 # Campaign state
 
-Status: verifying. Date: 2026-09-22. Authorized rounds: 20; used: 1; remaining: 19; mechanisms: 1.
+Status: awaiting review. Date: 2026-09-22. Authorized rounds: 20; used: 1; remaining: 19; mechanisms: 1.
 
 ## Ownership and process
 
@@ -22,4 +22,4 @@ Same-machine observations on 2026-09-22: Python 3.14.7 (/opt/homebrew/bin/python
 
 Initial commit 4a2afea. Capability reprobe confirmed system Python 3.14.7, uv 0.12.7, Typst 0.15.1, Lean 4.34.0 and Lake 5.0.0-src+293d5d0. Project CPython 3.14.2 and z3-solver 5.1.0.0 installed and tested. No local Mathlib directory. Shared-experience search for feedback, backward dependencies, vertex splitting and parallel assignments found no matches.
 
-[Prepare](work/preparation.md) committed at 3dad512, before candidate implementation, passes ten source cases, 192 independently cross-checked target thresholds, plus empty/huge/malformed cases. One oracle API failure was retained at 2f2dd01 and repaired without changing source/target expectations. Candidate now passes 10 instances, 19 recoveries and 4 negative outputs. [Proof](work/proof.md) covers every feasible ordering, including nonoptimal ones. Next: independent Verify. Experience extraction: none, known ingredients with task-specific proof.
+[Prepare](work/preparation.md) committed at 3dad512, before candidate implementation, passes ten source cases, 192 independently cross-checked target thresholds, plus empty/huge/malformed cases. One oracle API failure was retained at 2f2dd01 and repaired without changing source/target expectations. Candidate fc8ebca passes 10 instances, 19 recoveries and 4 negative outputs. [Independent Verify](work/verification.md) passes 204 instances and 607 recoveries, including 78 negative outputs and 116 nonoptimal feasible orderings. [Proof](work/proof.md) covers every feasible ordering. Next: fresh-context registered review. Experience extraction: none, known ingredients with task-specific proof.

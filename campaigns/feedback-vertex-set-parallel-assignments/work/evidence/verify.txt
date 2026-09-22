@@ -1,0 +1,7 @@
+2026-09-22; repository root; candidate fc8ebca.
+uv run python campaigns/feedback-vertex-set-parallel-assignments/work/check.py --candidate campaigns/feedback-vertex-set-parallel-assignments/work/algorithm.py
+{"instances": 10, "recoveries": 19, "negative": 4}
+Exit 0.
+uv run python campaigns/feedback-vertex-set-parallel-assignments/work/verify.py --candidate campaigns/feedback-vertex-set-parallel-assignments/work/algorithm.py
+{"instances": 204, "recoveries": 607, "negative": 78, "nonoptimal": 116, "subset_states": 1091028, "max_assignments": 18}
+Exit 0; complete stated finite family, no timeout or interrupted run.

@@ -1,0 +1,9 @@
+# Independent Verify
+
+Candidate maps at fc8ebca are unchanged during this check. `verify.py` imports neither candidate nor prepared checker. It executes F and G in fresh subprocesses and builds conflicts directly from the emitted assignment write/read sets. Subset dynamic programming chooses the first remaining assignment, charges every conflict it creates with the remaining suffix, and minimizes recursively. This proves the optimum for the finite target. It then enumerates up to four orders at each cost from that optimum through K, so nonoptimal feasible outputs are exercised. Returned permutations are independently pair-counted. Source truth uses exhaustive deletion subsets and a transitive-closure cycle check, separate from Prepare's Z3/rank and indegree-removal algorithms.
+
+Finite domain: all digraphs including loops on zero, one and two explicitly labeled vertices, with k=-1..n; all 64 loopless digraphs on three vertices with k=0,1; a three-cycle with k=2; a two-cycle with 5001-digit labels and negative, one, or huge positive bound. The verifier has no timeouts, randomness or imported expected target structure. At most 18 assignments in this independent family; the separate prepared suite reaches 24 assignments. Positive-output sampling is finite, not an enumeration of every feasible permutation.
+
+Command from repository root: `uv run python campaigns/feedback-vertex-set-parallel-assignments/work/verify.py --candidate campaigns/feedback-vertex-set-parallel-assignments/work/algorithm.py`.
+
+Result: 204 instances; 607 recoveries; 78 NO-SOLUTION outputs; 116 nonoptimal feasible target orderings; 1091028 total DP subset states. All passed. Prepared suite on the same maps: 10 instances, 19 recoveries, 4 negative outputs. No mismatch or solver failure. Evidence: evidence/verify.txt. General correctness and polynomial complexity remain proof obligations rather than finite conclusions; proof.md supplies the argument for review.

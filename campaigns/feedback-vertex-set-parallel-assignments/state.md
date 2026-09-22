@@ -1,6 +1,6 @@
 # Campaign state
 
-Status: prepared. Date: 2026-09-22. Authorized rounds: 20; used: 1 preliminary; remaining: 19; mechanisms: 1.
+Status: verifying. Date: 2026-09-22. Authorized rounds: 20; used: 1; remaining: 19; mechanisms: 1.
 
 ## Ownership and process
 
@@ -16,10 +16,10 @@ Same-machine observations on 2026-09-22: Python 3.14.7 (/opt/homebrew/bin/python
 
 | Round | Mechanism or literature scope | First discriminating check | Outcome | Record |
 |---|---|---|---|---|
-| 001 | Preliminary split-vertex and protected-dependency idea | Pending independent Prepare, then pair-count tests | Inconclusive; no experiment yet | [Record](rounds/001/round.md) |
+| 001 | Split vertices and k+1 protected dependency paths; initial conceptual sequencing deviation retained | Prepared pair-count target tests, including loops and complete bidirected graph | Supported | [Record](rounds/001/round.md) |
 
 ## Next action
 
 Initial commit 4a2afea. Capability reprobe confirmed system Python 3.14.7, uv 0.12.7, Typst 0.15.1, Lean 4.34.0 and Lake 5.0.0-src+293d5d0. Project CPython 3.14.2 and z3-solver 5.1.0.0 installed and tested. No local Mathlib directory. Shared-experience search for feedback, backward dependencies, vertex splitting and parallel assignments found no matches.
 
-[Prepare](work/preparation.md) passes ten source cases, 192 independently cross-checked target thresholds, plus empty/huge/malformed cases. One oracle API failure was retained at 2f2dd01; repaired by omitting the vacuous empty all-different constraint. No source/target expectations changed. Next: commit passing Prepare, then resume charged mechanism. No candidate code exists and no correctness claim is made yet. Experience extraction pending round closure.
+[Prepare](work/preparation.md) committed at 3dad512, before candidate implementation, passes ten source cases, 192 independently cross-checked target thresholds, plus empty/huge/malformed cases. One oracle API failure was retained at 2f2dd01 and repaired without changing source/target expectations. Candidate now passes 10 instances, 19 recoveries and 4 negative outputs. [Proof](work/proof.md) covers every feasible ordering, including nonoptimal ones. Next: independent Verify. Experience extraction: none, known ingredients with task-specific proof.
